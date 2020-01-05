@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<body>
+<form method="POST" action="地区数据">
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='点击查看城市数据!' type='SUBMIT'></p>
+</form>
+<br/>
+<br/>
+<form method="POST" action="年度结婚数图">
+<p><input value='年度结婚数图!' type='SUBMIT'></p>
+</form>
+<form method="POST" action="09与18年分省GDP与房价">
+<p><input value='09与18年分省GDP与房价!' type='SUBMIT'></p>
+</form>
+<form method="POST" action="09与18年平均工资与房价对比">
+<p><input value='09与18年平均工资与房价对比!' type='SUBMIT'></p>
+</form>
+<form method="POST" action="09与18年结婚人数与毕业人数对比">
+<p><input value='09与18年结婚人数与毕业人数对比!' type='SUBMIT'></p>
+</form>
+<form method="POST" action="举例山东和宁夏的数据分析">
+<p><input value='举例山东和宁夏的数据分析!' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+
+</body>
+</html>

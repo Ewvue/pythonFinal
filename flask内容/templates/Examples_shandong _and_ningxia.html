@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+    
+</head>
+<body>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+	<h1>山东房价，平均工资等数据分析</h1>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, '26e6e4ccbfee4c5798c3380c6d83a47d')">bar-example</button>
+            <button class="tablinks" onclick="showChart(event, '34b67bb44561450f8569f7557b9c6ad5')">line-example</button>
+            <button class="tablinks" onclick="showChart(event, 'e7367c01b74543e18b63b622dba6f96a')">table-example</button>
+    </div>
+
+    <div class="box">
+                <div id="26e6e4ccbfee4c5798c3380c6d83a47d" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_26e6e4ccbfee4c5798c3380c6d83a47d = echarts.init(
+            document.getElementById('26e6e4ccbfee4c5798c3380c6d83a47d'), 'white', {renderer: 'canvas'});
+        var option_26e6e4ccbfee4c5798c3380c6d83a47d = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u5546\u54c1\u623f\u623f\u4ef7\uff08\u5143/\u5e73\u65b9\u7c73\uff09",
+            "data": [
+                3390,
+                3809,
+                4298.78,
+                4556.63,
+                4797,
+                5029,
+                5290,
+                5728,
+                6153,
+                7386.25
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u57ce\u9547\u5355\u4f4d\u4eba\u5458\u5e73\u5747\u5de5\u8d44\uff08\u5143\uff09",
+            "data": [
+                29398,
+                33321,
+                37618,
+                41904,
+                46998,
+                51825,
+                57270,
+                62539,
+                68081,
+                73593
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u5546\u54c1\u623f\u623f\u4ef7\uff08\u5143/\u5e73\u65b9\u7c73\uff09",
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u57ce\u9547\u5355\u4f4d\u4eba\u5458\u5e73\u5747\u5de5\u8d44\uff08\u5143\uff09"
+            ],
+            "selected": {
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u5546\u54c1\u623f\u623f\u4ef7\uff08\u5143/\u5e73\u65b9\u7c73\uff09": true,
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u57ce\u9547\u5355\u4f4d\u4eba\u5458\u5e73\u5747\u5de5\u8d44\uff08\u5143\uff09": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "2009\u5e74",
+                "2010\u5e74",
+                "2011\u5e74",
+                "2012\u5e74",
+                "2013\u5e74",
+                "2014\u5e74",
+                "2015\u5e74",
+                "2016\u5e74",
+                "2017\u5e74",
+                "2018\u5e74"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u5c71\u4e1c\u7701\u5546\u54c1\u623f\u623f\u4ef7\u4e0e\u5e73\u5747\u5de5\u8d44\u5bf9\u6bd4"
+        }
+    ],
+    "dataZoom": [
+        {
+            "show": true,
+            "type": "slider",
+            "realtime": true,
+            "start": 20,
+            "end": 80,
+            "orient": "horizontal",
+            "zoomLock": false
+        }
+    ]
+};
+        chart_26e6e4ccbfee4c5798c3380c6d83a47d.setOption(option_26e6e4ccbfee4c5798c3380c6d83a47d);
+    </script>
+                <div id="34b67bb44561450f8569f7557b9c6ad5" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_34b67bb44561450f8569f7557b9c6ad5 = echarts.init(
+            document.getElementById('34b67bb44561450f8569f7557b9c6ad5'), 'white', {renderer: 'canvas'});
+        var option_34b67bb44561450f8569f7557b9c6ad5 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "2009\u5e74",
+                    91.84
+                ],
+                [
+                    "2010\u5e74",
+                    92.5
+                ],
+                [
+                    "2011\u5e74",
+                    96.91
+                ],
+                [
+                    "2012\u5e74",
+                    93.33
+                ],
+                [
+                    "2013\u5e74",
+                    89.14
+                ],
+                [
+                    "2014\u5e74",
+                    83.18
+                ],
+                [
+                    "2015\u5e74",
+                    70.1
+                ],
+                [
+                    "2016\u5e74",
+                    67.07
+                ],
+                [
+                    "2017\u5e74",
+                    62.58
+                ],
+                [
+                    "2018\u5e74",
+                    59.9
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "type": "min"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "line",
+            "name": "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u672c\u79d1\u6bd5\u4e1a\u6bd5\u4e1a\u4eba\u6570",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "2009\u5e74",
+                    18
+                ],
+                [
+                    "2010\u5e74",
+                    18.27
+                ],
+                [
+                    "2011\u5e74",
+                    17.93
+                ],
+                [
+                    "2012\u5e74",
+                    20.56
+                ],
+                [
+                    "2013\u5e74",
+                    21.17
+                ],
+                [
+                    "2014\u5e74",
+                    21.55
+                ],
+                [
+                    "2015\u5e74",
+                    22.75
+                ],
+                [
+                    "2016\u5e74",
+                    23.66
+                ],
+                [
+                    "2017\u5e74",
+                    24.55
+                ],
+                [
+                    "2018\u5e74",
+                    23.96
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "type": "max"
+                    }
+                ]
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570",
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u672c\u79d1\u6bd5\u4e1a\u6bd5\u4e1a\u4eba\u6570"
+            ],
+            "selected": {
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570": true,
+                "\u5c71\u4e1c\u8fd1\u5341\u5e74\u6765\u672c\u79d1\u6bd5\u4e1a\u6bd5\u4e1a\u4eba\u6570": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "2009\u5e74",
+                "2010\u5e74",
+                "2011\u5e74",
+                "2012\u5e74",
+                "2013\u5e74",
+                "2014\u5e74",
+                "2015\u5e74",
+                "2016\u5e74",
+                "2017\u5e74",
+                "2018\u5e74"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570\u4e0e\u672c\u79d1\u6bd5\u4e1a\u4eba\u6570\uff08\u5355\u4f4d\uff1a\u4e07\u4eba\uff09"
+        }
+    ]
+};
+        chart_34b67bb44561450f8569f7557b9c6ad5.setOption(option_34b67bb44561450f8569f7557b9c6ad5);
+    </script>
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="e7367c01b74543e18b63b622dba6f96a" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > 山东省近十年来的相关数据</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <tr>
+        <th>年份</th>
+        <th>2009</th>
+        <th>2010</th>
+        <th>2011</th>
+        <th>2012</th>
+        <th>2013</th>
+        <th>2014</th>
+        <th>2015</th>
+        <th>2016</th>
+        <th>2017</th>
+        <th>2018</th>
+    </tr>
+    <tr>
+        <td>人均GDP（元）</td>
+        <td>35894</td>
+        <td>41106</td>
+        <td>47335</td>
+        <td>51768</td>
+        <td>56885</td>
+        <td>60879</td>
+        <td>64168</td>
+        <td>68733</td>
+        <td>72807</td>
+        <td>76267</td>
+    </tr>
+    <tr>
+        <td>商品房房价（元）</td>
+        <td>3390</td>
+        <td>3809</td>
+        <td>4298.78</td>
+        <td>4556.63</td>
+        <td>4797</td>
+        <td>5029</td>
+        <td>5290</td>
+        <td>5728</td>
+        <td>6153</td>
+        <td>7386.25</td>
+    </tr>
+    <tr>
+        <td>城镇单位人员平均工资（元）</td>
+        <td>29398</td>
+        <td>33321</td>
+        <td>37618</td>
+        <td>41904</td>
+        <td>46998</td>
+        <td>51825</td>
+        <td>57270</td>
+        <td>62539</td>
+        <td>68081</td>
+        <td>73593</td>
+    </tr>
+    <tr>
+        <td>结婚人数（万人）</td>
+        <td>91.84</td>
+        <td>92.5</td>
+        <td>96.91</td>
+        <td>93.33</td>
+        <td>89.14</td>
+        <td>83.18</td>
+        <td>70.1</td>
+        <td>67.07</td>
+        <td>62.58</td>
+        <td>59.9</td>
+    </tr>
+    <tr>
+        <td>本科毕业人数（万人）</td>
+        <td>18</td>
+        <td>18.27</td>
+        <td>17.93</td>
+        <td>20.56</td>
+        <td>21.17</td>
+        <td>21.55</td>
+        <td>22.75</td>
+        <td>23.66</td>
+        <td>24.55</td>
+        <td>23.96</td>
+    </tr>
+</table>
+        </div>
+
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+	<h4>第一，在条形图中我们可以看出，近十年来山东的商品房房价在不断地上涨，从3390元/平方米，上涨至7386元/平方米，这是差距非常大的一个数据，一平方米相差4000元，那么如果一对即将需要买房的夫妻来说，如果他们要买50平方米，相对来说是差距20万元。从山东省单位人员的平均工资来看，虽然从2009年到2018年年平均工资上涨了4万元，但我们从每一年来看，他的上升幅度是很少的，平均每年上升4000元左右，但对于买房来说，压力也是非常大的。</h4>
+	<h4>第二，在山东省的结婚人数折线图中我们可以看出，在2009年至2011年期间，结婚人数是呈上升的趋势的，而2011年达到顶峰，根据搜集资料发现，在2011年推行试行了“二胎政策”，这可能会吸引了的结婚导致结婚人数上涨。在2011年后，结婚人数有着快速下滑的趋势，从96.91万对下降到2018年的59.9万对。根据搜集资料发现，山东因为转型升级，劳动密集型产业劳动人员减少，导致相应的结婚人数也减少。随着教育的不断发展，山东的本科毕业人数也在缓慢地增长。受教育程度的提高，婚姻观的变化也是影响结婚人数的一个重要因数。</h4>
+	</br>
+	<h1>宁夏gdp，结婚人数，毕业人数数据分析</h1>
+	 <div class="tab">
+            <button class="tablinks" onclick="showChart(event, '8f71d2dee879422885e8a62905f0b2cc')">bar-example</button>
+            <button class="tablinks" onclick="showChart(event, '3265b0ce276a49de8fe090c7e93aeead')">line-example</button>
+    </div>
+
+    <div class="box">
+                <div id="8f71d2dee879422885e8a62905f0b2cc" class="chart-container" style="width:900px; height:500px;"></div>
+<script>
+        var chart_8f71d2dee879422885e8a62905f0b2cc = echarts.init(
+            document.getElementById('8f71d2dee879422885e8a62905f0b2cc'), 'white', {renderer: 'canvas'});
+        var option_8f71d2dee879422885e8a62905f0b2cc = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u4eba\u5747GDP\uff08\u5143\uff09",
+            "data": [
+                21777,
+                26860,
+                33043,
+                36394,
+                39613,
+                41834,
+                43805,
+                47194,
+                50765,
+                54094
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u4eba\u5747GDP\uff08\u5143\uff09"
+            ],
+            "selected": {
+                "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u4eba\u5747GDP\uff08\u5143\uff09": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "2009\u5e74",
+                "2010\u5e74",
+                "2011\u5e74",
+                "2012\u5e74",
+                "2013\u5e74",
+                "2014\u5e74",
+                "2015\u5e74",
+                "2016\u5e74",
+                "2017\u5e74",
+                "2018\u5e74"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u8fd1\u5341\u5e74\u6765\u5b81\u590f\u4eba\u5747GDP"
+        }
+    ],
+    "dataZoom": [
+        {
+            "show": true,
+            "type": "slider",
+            "realtime": true,
+            "start": 20,
+            "end": 80,
+            "orient": "horizontal",
+            "zoomLock": false
+        }
+    ]
+};
+        chart_8f71d2dee879422885e8a62905f0b2cc.setOption(option_8f71d2dee879422885e8a62905f0b2cc);
+    </script>
+                <div id="3265b0ce276a49de8fe090c7e93aeead" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_3265b0ce276a49de8fe090c7e93aeead = echarts.init(
+            document.getElementById('3265b0ce276a49de8fe090c7e93aeead'), 'white', {renderer: 'canvas'});
+        var option_3265b0ce276a49de8fe090c7e93aeead = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "2009\u5e74",
+                    5.66
+                ],
+                [
+                    "2010\u5e74",
+                    6
+                ],
+                [
+                    "2011\u5e74",
+                    6.15
+                ],
+                [
+                    "2012\u5e74",
+                    6.07
+                ],
+                [
+                    "2013\u5e74",
+                    6.38
+                ],
+                [
+                    "2014\u5e74",
+                    5.6
+                ],
+                [
+                    "2015\u5e74",
+                    6.09
+                ],
+                [
+                    "2016\u5e74",
+                    6.2
+                ],
+                [
+                    "2017\u5e74",
+                    6.03
+                ],
+                [
+                    "2018\u5e74",
+                    6.07
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "type": "min"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "line",
+            "name": "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u672c\u79d1\u6bd5\u4e1a\u6bd5\u4e1a\u4eba\u6570",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "2009\u5e74",
+                    0.77
+                ],
+                [
+                    "2010\u5e74",
+                    0.92
+                ],
+                [
+                    "2011\u5e74",
+                    1
+                ],
+                [
+                    "2012\u5e74",
+                    1.18
+                ],
+                [
+                    "2013\u5e74",
+                    1.26
+                ],
+                [
+                    "2014\u5e74",
+                    1.33
+                ],
+                [
+                    "2015\u5e74",
+                    1.55
+                ],
+                [
+                    "2016\u5e74",
+                    1.68
+                ],
+                [
+                    "2017\u5e74",
+                    1.72
+                ],
+                [
+                    "2018\u5e74",
+                    1.79
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "type": "max"
+                    }
+                ]
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570",
+                "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u672c\u79d1\u6bd5\u4e1a\u6bd5\u4e1a\u4eba\u6570"
+            ],
+            "selected": {
+                "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570": true,
+                "\u5b81\u590f\u8fd1\u5341\u5e74\u6765\u672c\u79d1\u6bd5\u4e1a\u6bd5\u4e1a\u4eba\u6570": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "2009\u5e74",
+                "2010\u5e74",
+                "2011\u5e74",
+                "2012\u5e74",
+                "2013\u5e74",
+                "2014\u5e74",
+                "2015\u5e74",
+                "2016\u5e74",
+                "2017\u5e74",
+                "2018\u5e74"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u8fd1\u5341\u5e74\u6765\u7ed3\u5a5a\u4eba\u6570\u4e0e\u672c\u79d1\u6bd5\u4e1a\u4eba\u6570\uff08\u5355\u4f4d\uff1a\u4e07\u4eba\uff09"
+        }
+    ]
+};
+        chart_3265b0ce276a49de8fe090c7e93aeead.setOption(option_3265b0ce276a49de8fe090c7e93aeead);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+	<h4>从图表中我们可以看到，宁夏回族自治区在近十年来的人均GPD的增长速度相对于其他地区来说增长是相对来说较为缓慢的，这与它的地理位置，人口密度，政策等许多因素相关。第二个折线图中我们可以看到，宁夏的结婚人数变化不明显，近十年来结婚人数最高点与最低点相差一万人不够，因此可以推算出宁夏的结婚率是较为稳定的。在本科毕业人数的折线图中我们可以看到，本科的毕业人数是逐年上升的，我们可以得到宁夏地区的受教育程度不断地提高。人们的思想更加地开放，婚姻观也随之改变。但是因为宁夏地理位置以及经济发展的原因，人员流动较少，因此结婚人数的变化较不明显。</h4>
+</body>
+</html>
