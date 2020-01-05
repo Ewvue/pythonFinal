@@ -4,7 +4,7 @@
 > 这个python期末项目我一个做了两个web，一个是Flask，一个是dash。<br/>
 > flask在pythonanywhere上已经部署成功，dash的部署经过多次尝试，发现pythonanywhere比较难部署dash，现在在找另外的方法去部署（云服务器），正在努力ing。
 ##### dash页面的截图
-![dash页面截图](https://github.com/PAN-XUE-JIE/pythonFinal/blob/master/dash.png?raw=true)
+![dash的页面截图](https://upload-images.jianshu.io/upload_images/15515130-5bdc05d53ed5398d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ## HTML档描述
 * 一、flask的描述
 ### 一、flask的描述
