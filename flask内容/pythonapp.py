@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request
 import pandas as pd
+import cufflinks as cf
 import plotly as py
+import plotly.graph_objs as go
+from pyecharts import options as opts
+from pyecharts.charts import Line
 
 df1 = pd.read_csv("sum.csv",encoding = 'UTF-8')
 
