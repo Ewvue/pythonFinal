@@ -3,6 +3,8 @@
 > python档链接：* [pythonanywhere](http://panxuejie.pythonanywhere.com)<br/>
 > 这个python期末项目我一个做了两个web，一个是Flask，一个是dash。<br/>
 > flask在pythonanywhere上已经部署成功，dash的部署经过多次尝试，发现pythonanywhere比较难部署dash，现在在找另外的方法去部署（云服务器），正在努力ing。
+##### dash页面的截图
+![dash页面截图](https://github.com/PAN-XUE-JIE/pythonFinal/blob/master/dash.png?raw=true)
 ## HTML档描述
 * 一、flask的描述
 ### 一、flask的描述
@@ -21,7 +23,7 @@
 * 一、flask的描述
 * 二、dash的描述
 ### 一、flask的描述
-根据我们自己要做的web应用，我们为web应用调用了一些已有的函数，然后读取数据df1 = pd.read_csv("sum.csv",encoding = 'UTF-8')，因为想做出一个可交互式的画图，就定义函数，再调用定义的函数去提取数据表中的“province”指标，根据我们自己选择的值，我们可以进一步实现实时交互，放回我们选的省份的所以可视化图。<br/>
+根据我们自己要做的web应用使用了jinja2，我们为web应用调用了一些已有的函数，然后读取数据df1 = pd.read_csv("sum.csv",encoding = 'UTF-8')，因为想做出一个可交互式的画图，就定义函数，再调用定义的函数去提取数据表中的“province”指标，根据我们自己选择的值，我们可以进一步实现实时交互，放回我们选的省份的所以可视化图。<br/>
 在其中使用了数据结构嵌套：
 > fig = dfs.iplot(kind="bar", x="province", asFigure=True)
 > py.offline.plot(fig, filename="example1.html",auto_open=False)
@@ -33,7 +35,33 @@
 >                            )
 这样可以根据我们的主题一步一步引导我们去了解我们分析的主题内容，并且通过可交互式和可视化图来提高我们的互动性，更能全面的让我们了解我们研究的主题。
 ### 二、dash的描述
-
+首先调用了dash和pandas模块，然后读取数据，通过for的循环遍历来提取数据：
+> dcc.Dropdown(
+>                 id='xaxis-column',
+>                 options=[{'label': i, 'value': i} for i in available_indicators],
+>                 value='职位、房价、身份'
+>             ),
+* 定义x、y轴，提取数据表的数据,和进行了函数的嵌套dff = df[df['Year'] == year_value]：
+> @app.callback(
+>     Output('indicator-graphic', 'figure'),
+>     [Input('xaxis-column', 'value'),
+>      Input('yaxis-column', 'value'),
+>      Input('xaxis-type', 'value'),
+>      Input('yaxis-type', 'value'),
+>      Input('year--slider', 'value')])
+* 定义数据表的指标，调用定义的x、y轴，进行数据的交互实现，加入了html样式：
+> return {
+>         'data': [dict(
+>             x=dff[dff['Indicator Name'] == xaxis_column_name]['Value'],
+>             y=dff[dff['Indicator Name'] == yaxis_column_name]['Value'],
+>             text=dff[dff['Indicator Name'] == yaxis_column_name]['Country Name'],
+>             mode='markers',
+>             marker={
+>                 'size': 15,
+>                 'opacity': 0.5,
+>                 'line': {'width': 0.5, 'color': 'white'}
+>             }
+>         )],
 ## Web App动作描述
 * 一、flask的描述
 * 二、dash的描述
