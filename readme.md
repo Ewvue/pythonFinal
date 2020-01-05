@@ -1,6 +1,6 @@
 # PYTHON期末作业技术文档
-> github仓库：* [github](https://github.com/PAN-XUE-JIE/pythonFinal)<br/>
-> python档链接：* [pythonanywhere](http://panxuejie.pythonanywhere.com)<br/>
+> github仓库：[github](https://github.com/PAN-XUE-JIE/pythonFinal)<br/>
+> python档链接：[pythonanywhere](http://panxuejie.pythonanywhere.com)<br/>
 > 这个python期末项目我一个做了两个web，一个是Flask，一个是dash。<br/>
 > flask在pythonanywhere上已经部署成功，dash的部署经过多次尝试，发现pythonanywhere比较难部署dash，现在在找另外的方法去部署（云服务器），正在努力ing。
 ##### dash页面的截图
@@ -68,3 +68,5 @@
 ### 一、flask的描述
 在web页面，我们首先可以很直观的看到数据表，刚开始，我们可以通过我们自己对省份的筛选得出筛选省份的全部数据，通过这个可以先了解到我们想要关注的省份的数据情况，并通过了可视化绘图完成了图表的制作，更能全面的了解数据。再者在下面可以在我们的引导下，通过交互式的操作，先一步一步引导我们去了解数据，给我们讲述我们主题的故事，先是通过交互式的体验，可以在数据可视化图上进行交互式操作，给我们讲述了年度省份的结婚数，并涵盖有数据的总结，后一步一步的引导我们去深入主题，通过四个交互式的体验，我们先是可以了解我们的主题故事，最后通过举例分析两省份的数据进行故事的结尾，增强了说服性。
 ### 二、dash的描述
+通过两个下拉框，可以选择两个值去进行数据的筛选，并且返回一个可视化可交互的图表，将两个指标的数据进行可视化比较，充分的表现故事的内容丰富
+
